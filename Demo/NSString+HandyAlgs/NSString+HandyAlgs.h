@@ -20,7 +20,7 @@
 - (BOOL)isPalindrome;
 
 // Make palidrome with minimum number of insertions
-- (NSString *)makePalindrome;
+- (NSString *)palindromeWithMinInsertions;
 
 
 @end

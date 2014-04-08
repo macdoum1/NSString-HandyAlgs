@@ -38,7 +38,7 @@
     return [self caseInsensitiveCompare:[self reverseString]] == NSOrderedSame;
 }
 
-- (NSString *)makePalindrome
+- (NSString *)palindromeWithMinInsertions
 {
     return [self recursivePalidrome:self];
 }
