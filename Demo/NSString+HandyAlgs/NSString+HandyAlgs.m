@@ -129,4 +129,24 @@
                     
 }
 
+- (unichar)firstNonRepeatedCharacter
+{
+    NSMutableDictionary *dictionary = [[NSMutableDictionary alloc]init];
+    for(int i=0;i<[self length];i++)
+    {
+        NSString *characterKey = [NSString stringWithFormat:@"%C",[self characterAtIndex:i]];
+        NSNumber *value = [NSNumber numberWithInt:[[dictionary objectForKey:characterKey]integerValue] + 1];
+        [dictionary setObject:value forKey:characterKey];
+    }
+    
+    for(NSString *key in dictionary)
+    {
+        if([(NSNumber*)[dictionary objectForKey:key] isEqualToNumber:[NSNumber numberWithInt:1]])
+        {
+            return [key characterAtIndex:0];
+        }
+    }
+    return 0;
+}
+
 @end

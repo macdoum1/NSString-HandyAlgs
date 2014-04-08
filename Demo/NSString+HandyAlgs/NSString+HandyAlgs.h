@@ -34,5 +34,8 @@
 // Determines if word is in dictionary
 - (BOOL)isInDictionary;
 
+// Returns the first non-repeated character in a string
+- (unichar)firstNonRepeatedCharacter;
+
 
 @end

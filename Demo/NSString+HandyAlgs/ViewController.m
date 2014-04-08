@@ -52,6 +52,10 @@
     // Check if word is in dictionary
     NSString *dictWord = @"Definitely";
     NSLog(@"Is %@ in dictionary: %@",dictWord,[dictWord isInDictionary] ? @"Yes" : @"No");
+    
+    // Find first non-repeated character
+    NSString *repeatedCharacters = @"ababnexnetjtj";
+    NSLog(@"First non-repeated character in %@ is %C",repeatedCharacters,[repeatedCharacters firstNonRepeatedCharacter]);
 }
 
 - (void)didReceiveMemoryWarning
