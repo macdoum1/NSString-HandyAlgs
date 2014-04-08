@@ -22,5 +22,8 @@
 // Make palidrome with minimum number of insertions
 - (NSString *)palindromeWithMinInsertions;
 
+// Determines if string is rotation of given string
+- (BOOL)isRotationOfString:(NSString *)string;
+
 
 @end

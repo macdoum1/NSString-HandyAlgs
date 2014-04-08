@@ -70,4 +70,25 @@
     }
 }
 
+- (BOOL)isRotationOfString:(NSString *)string
+{
+    if([self length] == [string length])
+    {
+        NSString *concatString = [NSString stringWithFormat:@"%@%@",self,self];
+
+        if([[concatString lowercaseString] rangeOfString:[string lowercaseString]].location != NSNotFound)
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
+    else
+    {
+        return false;
+    }
+}
+
 @end

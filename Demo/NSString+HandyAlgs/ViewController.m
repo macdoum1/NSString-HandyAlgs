@@ -26,13 +26,18 @@
     NSString *wordsToBeReversed = @"This is a test sentence";
     NSLog(@"Original: %@\t Words Reversed:%@",wordsToBeReversed,[wordsToBeReversed reverseWordsWithDelimiter:@" "]);
     
-    // Palidrome Detection
+    // Palidrome detection
     NSString *palindrome = @"Mom";
     NSLog(@"Is %@ a palidrome: %@",palindrome,[palindrome isPalindrome] ? @"Yes" : @"No");
     
-    NSString *testStr = @"abda";
-    NSLog(@"Original: %@\tPalidrome: %@",testStr,[testStr makePalindrome]);
+    // Create palindrome with minimum insertions
+    NSString *palStr = @"abda";
+    NSLog(@"Original: %@\tPalidrome: %@",palStr,[palStr palindromeWithMinInsertions]);
     
+    // Check if string is rotation of given string
+    NSString *rotString = @"RotatedString";
+    NSString *rotStringTwo = @"StringRotated";
+    NSLog(@"Is %@ a rotation of %@: %@",rotString,rotStringTwo,[rotString isRotationOfString:rotStringTwo] ? @"Yes" : @"No");
 }
 
 - (void)didReceiveMemoryWarning
