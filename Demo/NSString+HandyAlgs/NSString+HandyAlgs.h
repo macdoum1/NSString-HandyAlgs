@@ -19,5 +19,8 @@
 // Determines if string is palindrome (case insensitive)
 - (BOOL)isPalindrome;
 
+// Make palidrome with minimum number of insertions
+- (NSString *)makePalindrome;
+
 
 @end

@@ -32,9 +32,42 @@
     }
     return reversedWords;
 }
+
 - (BOOL)isPalindrome
 {
     return [self caseInsensitiveCompare:[self reverseString]] == NSOrderedSame;
+}
+
+- (NSString *)makePalindrome
+{
+    return [self recursivePalidrome:self];
+}
+
+- (NSString *)recursivePalidrome:(NSString *)string
+{
+    if([string length] == 1 || ([string length] == 2 && [string characterAtIndex:0] == [string characterAtIndex:1]))
+    {
+        return string;
+    }
+    else
+    {
+        NSUInteger last = [string length] - 1;
+        NSUInteger start = 0;
+        for(int i = 0; i < last; i++)
+        {
+            if([string characterAtIndex:i] == [string characterAtIndex:last])
+            {
+                last--;
+            }
+            else
+            {
+                start = i + 1;
+            }
+        }
+        NSString *prefix = [string substringWithRange:NSMakeRange(0, start)];
+        NSString *reversedPrefix = [prefix reverseString];
+        return [NSString stringWithFormat:@"%@%@",string,reversedPrefix];
+    }
 }
 
 @end

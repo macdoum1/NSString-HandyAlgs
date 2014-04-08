@@ -30,6 +30,9 @@
     NSString *palindrome = @"Mom";
     NSLog(@"Is %@ a palidrome: %@",palindrome,[palindrome isPalindrome] ? @"Yes" : @"No");
     
+    NSString *testStr = @"abda";
+    NSLog(@"Original: %@\tPalidrome: %@",testStr,[testStr makePalindrome]);
+    
 }
 
 - (void)didReceiveMemoryWarning
