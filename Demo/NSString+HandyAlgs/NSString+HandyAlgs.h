@@ -13,6 +13,9 @@
 // Reverse String
 - (NSString *)reverseString;
 
+// Reverse words in string with given delimiter
+- (NSString *)reverseWordsWithDelimiter:(NSString *)delimiter;
+
 // Determines if string is palindrome (case insensitive)
 - (BOOL)isPalindrome;
 

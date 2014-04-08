@@ -22,6 +22,16 @@
     return reverseString;
 }
 
+- (NSString *)reverseWordsWithDelimiter:(NSString *)delimiter
+{
+    NSArray *words = [self componentsSeparatedByString:delimiter];
+    NSMutableString *reversedWords = [NSMutableString string];
+    for(NSString *word in [words reverseObjectEnumerator])
+    {
+        [reversedWords appendFormat:@"%@ ",word];
+    }
+    return reversedWords;
+}
 - (BOOL)isPalindrome
 {
     return [self caseInsensitiveCompare:[self reverseString]] == NSOrderedSame;

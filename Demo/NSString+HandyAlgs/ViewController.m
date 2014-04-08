@@ -18,9 +18,13 @@
 {
     [super viewDidLoad];
     
-    // Reverse Test
+    // Reverse string test
 	NSString *toBeReversed = @"Hello World";
     NSLog(@"Original: %@\tReversed: %@",toBeReversed,[toBeReversed reverseString]);
+    
+    // Reverse words in string
+    NSString *wordsToBeReversed = @"This is a test sentence";
+    NSLog(@"Original: %@\t Words Reversed:%@",wordsToBeReversed,[wordsToBeReversed reverseWordsWithDelimiter:@" "]);
     
     // Palidrome Detection
     NSString *palindrome = @"Mom";
