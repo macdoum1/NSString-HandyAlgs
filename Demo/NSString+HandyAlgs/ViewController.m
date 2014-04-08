@@ -48,6 +48,10 @@
     NSString *stringForArray = @"Array String";
     NSArray *characterArrayFromString = [stringForArray convertToArray];
     NSLog(@"String: %@\t ArrayofChars:%@",stringForArray,characterArrayFromString);
+    
+    // Check if word is in dictionary
+    NSString *dictWord = @"Definitely";
+    NSLog(@"Is %@ in dictionary: %@",dictWord,[dictWord isInDictionary] ? @"Yes" : @"No");
 }
 
 - (void)didReceiveMemoryWarning

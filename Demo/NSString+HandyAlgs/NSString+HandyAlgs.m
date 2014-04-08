@@ -120,4 +120,13 @@
     return characterArray;
 }
 
+- (BOOL)isInDictionary
+{
+    UITextChecker *dictionaryCheck = [[UITextChecker alloc]init];
+    NSString *language = [[NSLocale currentLocale] objectForKey:NSLocaleLanguageCode];
+    NSRange rangeOfMisspelling = [dictionaryCheck rangeOfMisspelledWordInString:self range:NSMakeRange(0, [self length]) startingAt:0 wrap:NO language:language];
+    return rangeOfMisspelling.location == NSNotFound;
+                    
+}
+
 @end

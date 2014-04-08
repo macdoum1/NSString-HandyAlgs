@@ -31,5 +31,8 @@
 // Convert string to array (character by character)
 - (NSArray *)convertToArray;
 
+// Determines if word is in dictionary
+- (BOOL)isInDictionary;
+
 
 @end
