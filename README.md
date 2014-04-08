@@ -13,6 +13,7 @@ Features
 5. Determine if string is rotation of given string
 6. Determine if string is anagram of given string
 7. Convert string to NSArray of characters
+8. Determine if word is in dictionary
 
 Usage
 ---
