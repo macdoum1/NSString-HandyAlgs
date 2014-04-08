@@ -25,5 +25,11 @@
 // Determines if string is rotation of given string
 - (BOOL)isRotationOfString:(NSString *)string;
 
+// Determines if string is anagram of given string
+- (BOOL)isAnagramOfString:(NSString *)string;
+
+// Convert string to array (character by character)
+- (NSArray *)convertToArray;
+
 
 @end

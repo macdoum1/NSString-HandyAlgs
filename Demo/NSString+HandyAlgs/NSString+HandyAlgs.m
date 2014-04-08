@@ -91,4 +91,33 @@
     }
 }
 
+- (BOOL)isAnagramOfString:(NSString *)string
+{
+    if([self length] != [string length])
+    {
+        return false;
+    }
+    NSString *lhsString = [self lowercaseString];
+    NSString *rhsString = [string lowercaseString];
+    NSArray *lhsArray = [lhsString convertToArray];
+    NSArray *rhsArray = [rhsString convertToArray];
+    lhsArray = [lhsArray sortedArrayUsingSelector:@selector(localizedCaseInsensitiveCompare:)];
+    rhsArray = [rhsArray sortedArrayUsingSelector:@selector(localizedCaseInsensitiveCompare:)];
+    return [lhsArray isEqualToArray:rhsArray];
+}
+
+- (NSArray *)convertToArray
+{
+    NSMutableArray *characterArray = [[NSMutableArray alloc]init];
+    NSUInteger i = 0;
+    while(i < [self length])
+    {
+        NSRange characterRange = [self rangeOfComposedCharacterSequenceAtIndex:i];
+        NSString *character = [self substringWithRange:characterRange];
+        [characterArray addObject:character];
+        i = i + characterRange.length;
+    }
+    return characterArray;
+}
+
 @end
