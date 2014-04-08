@@ -14,6 +14,7 @@ Features
 6. Determine if string is anagram of given string
 7. Convert string to NSArray of characters
 8. Determine if word is in dictionary
+9. Returns first non-repeated character
 
 Usage
 ---
