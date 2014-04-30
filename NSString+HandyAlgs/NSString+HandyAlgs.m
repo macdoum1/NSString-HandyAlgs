@@ -145,4 +145,33 @@
     return 0;
 }
 
+- (BOOL)hasCorrectParenthesis
+{
+    NSMutableArray *stackArray = [[NSMutableArray alloc]init];
+    for(int i=0;i < [self length];i++)
+    {
+        unichar currentChar = [self characterAtIndex:i];
+        if(currentChar == '(')
+        {
+            [stackArray addObject:[NSString stringWithFormat:@"%c",currentChar]];
+        }
+        else if(currentChar == ')')
+        {
+            if([stackArray count] == 0)
+            {
+                return false;
+            }
+            else if([[stackArray objectAtIndex:[stackArray count] -1]  isEqualToString:@"("])
+            {
+                [stackArray removeObjectAtIndex:[stackArray count]-1];
+            }
+            else
+            {
+                return false;
+            }
+        }
+    }
+    return [stackArray count] == 0;
+}
+
 @end

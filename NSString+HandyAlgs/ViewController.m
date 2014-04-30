@@ -56,6 +56,9 @@
     // Find first non-repeated character
     NSString *repeatedCharacters = @"ababnexnetjtj";
     NSLog(@"First non-repeated character in %@ is %C",repeatedCharacters,[repeatedCharacters firstNonRepeatedCharacter]);
+    
+    NSString *paranTest = @"())";
+    NSLog(@"Paranthesis String: %@ is correct: %@",paranTest, [paranTest hasCorrectParenthesis] ? @"Yes" : @"No");
 }
 
 - (void)didReceiveMemoryWarning

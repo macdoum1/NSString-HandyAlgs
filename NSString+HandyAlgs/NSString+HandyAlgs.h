@@ -37,5 +37,8 @@
 // Returns the first non-repeated character in a string
 - (unichar)firstNonRepeatedCharacter;
 
+// Determines if string contains correct matching paranthesis
+- (BOOL)hasCorrectParenthesis;
+
 
 @end
