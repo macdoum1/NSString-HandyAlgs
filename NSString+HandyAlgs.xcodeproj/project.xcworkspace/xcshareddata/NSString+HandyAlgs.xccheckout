@@ -5,7 +5,7 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
-	<string>7430799C-A85D-42CE-859E-901BFD852238</string>
+	<string>2461AB74-EEA3-4DF5-9C77-20FCF9649C7F</string>
 	<key>IDESourceControlProjectName</key>
 	<string>NSString+HandyAlgs</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
@@ -14,11 +14,11 @@
 		<string>https://github.com/macdoum1/NSString-HandyAlgs.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>Demo/NSString+HandyAlgs.xcodeproj/project.xcworkspace</string>
+	<string>NSString+HandyAlgs.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>62D484A7-FBB8-459D-B358-BC2AEC009D7A</key>
-		<string>../../..</string>
+		<string>../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
 	<string>https://github.com/macdoum1/NSString-HandyAlgs.git</string>

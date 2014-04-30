@@ -40,22 +40,17 @@
 
 - (NSString *)palindromeWithMinInsertions
 {
-    return [self recursivePalidrome:self];
-}
-
-- (NSString *)recursivePalidrome:(NSString *)string
-{
-    if([string length] == 1 || ([string length] == 2 && [string characterAtIndex:0] == [string characterAtIndex:1]))
+    if([self length] == 1 || ([self length] == 2 && [self characterAtIndex:0] == [self characterAtIndex:1]))
     {
-        return string;
+        return self;
     }
     else
     {
-        NSUInteger last = [string length] - 1;
+        NSUInteger last = [self length] - 1;
         NSUInteger start = 0;
         for(int i = 0; i < last; i++)
         {
-            if([string characterAtIndex:i] == [string characterAtIndex:last])
+            if([self characterAtIndex:i] == [self characterAtIndex:last])
             {
                 last--;
             }
@@ -64,9 +59,10 @@
                 start = i + 1;
             }
         }
-        NSString *prefix = [string substringWithRange:NSMakeRange(0, start)];
+        NSString *prefix = [self substringWithRange:NSMakeRange(0, start)];
         NSString *reversedPrefix = [prefix reverseString];
-        return [NSString stringWithFormat:@"%@%@",string,reversedPrefix];
+        NSString *lastCharRemoved = [self substringToIndex:[self length] -1];
+        return [NSString stringWithFormat:@"%@%@",lastCharRemoved,reversedPrefix];
     }
 }
 
